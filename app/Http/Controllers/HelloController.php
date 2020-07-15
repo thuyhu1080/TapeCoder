@@ -13,11 +13,10 @@ class HelloController extends Controller
 
     public function services()
     {
-        $services = [
-            'Cool service',
-            'Another Cool Service'
-        ];
         
+        $services = \App\Service::all();
+
+
         return view('services', compact('services'));
     }
 }
