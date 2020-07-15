@@ -5,10 +5,19 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 class HelloController extends Controller
-{
-    public function index() {
-        $coolString = 'Hello from Routes.';
+{   
+    public function about()
+    {
+        return view('about');
+    }
 
-        return view('subviews.hello', compact('coolString'));
+    public function services()
+    {
+        $services = [
+            'Cool service',
+            'Another Cool Service'
+        ];
+        
+        return view('services', compact('services'));
     }
 }
