@@ -17,8 +17,10 @@ Route::get('/', function () {
     return view('about');
 });
 
-Route::get('/about', 'HelloController@about');
-Route::get('/services', 'ServiceController@index');
-
 // Route::view('/about', 'about');
 // Route::view('/services', 'services');
+
+Route::get('/about', 'HelloController@about');
+
+Route::get('/service', 'ServiceController@index');
+Route::post('/service', 'ServiceController@store');
